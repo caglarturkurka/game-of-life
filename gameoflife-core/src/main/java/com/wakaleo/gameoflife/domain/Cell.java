@@ -1,30 +1,31 @@
 package com.wakaleo.gameoflife.domain;
 
 public enum Cell {
-	LIVE_CELL("+"), DEAD_CELL(".");
-	private String symbol;
+    LIVE_CELL("*"), DEAD_CELL(".");
 
-	private Cell(String symbol) {
-		this.symbol = symbol;
-	}
+    private String symbol;
 
-	@Override
-	public String toString() {
-		return symbol;
-	}
+    private Cell(final String initialSymbol) {
+        this.symbol = initialSymbol;
+    }
 
-	static Cell fromSymbol(String symbol) {
-		Cell cellRepresentedBySymbol = null;
-		for (Cell cell : Cell.values()) {
-			if (cell.symbol.equals(symbol)) {
-				cellRepresentedBySymbol = cell;
-				break;
-			}
-		}
-		return cellRepresentedBySymbol;
-	}
+    @Override
+    public String toString() {
+        return symbol;
+    }
 
-	public String getSymbol() {
-		return symbol;
-	}
+    static Cell fromSymbol(final String symbol) {
+        Cell cellRepresentedBySymbol = null;
+        for (Cell cell : Cell.values()) {
+            if (cell.symbol.equals(symbol)) {
+                cellRepresentedBySymbol = cell;
+                break;
+            }
+        }
+        return cellRepresentedBySymbol;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
 }
