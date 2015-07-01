@@ -4,7 +4,7 @@ public enum Cell {
     LIVE_CELL("*"), DEAD_CELL(".");
 
     /**
-     * 
+     * asdasdasdasdasdasd
      */
     private String symbol;
 
